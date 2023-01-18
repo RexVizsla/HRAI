@@ -1,0 +1,9 @@
+Rating works on a scale from 0-1. Later the AI will try to reproduce these values so they should be as accurate as possible.
+In order to make the rating more deterministic, I will attempt to make some general rules for the rating here.
+However, it's important to keep in mind that in some exceptions the rating may still differ from the rules.
+
+0: No recognizable person on the picture
+0-0.2: Person is not not clearly visible (obstructed, head missing, cut off, ...)
+0.2-0.4: Person doesn't match general criteria
+0.4-0.9: Average rating range
+0.9-1: Extraordinary match
