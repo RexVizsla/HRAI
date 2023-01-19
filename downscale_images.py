@@ -1,4 +1,5 @@
 from PIL import Image
+import os
 
 def downscale_image(image_path, target_size=(2000, 2000)):
     # Open the image
@@ -12,6 +13,9 @@ def downscale_image(image_path, target_size=(2000, 2000)):
             im = im.resize(new_size, resample=Image.LANCZOS)
             # Save the downscaled image
             im.save(image_path)
+            print("Downscaled image with name '" + os.path(im) + "' to " + str(new_size))
 
-# add folder interating here
-downscale_image('image.jpg')
+image_path = r"C:\Users\rexvizsla\Desktop\AI\HRAI\possible_dataset\rated"
+
+for image in image_path:
+    downscale_image(image)
