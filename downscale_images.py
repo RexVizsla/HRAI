@@ -20,4 +20,7 @@ image_path = r"C:\Users\rexvizsla\Desktop\AI\HRAI\possible_dataset\rated"
 image_path_downscaled = r"C:\Users\rexvizsla\Desktop\AI\HRAI\possible_dataset\rated\downscaled"
 
 for image in os.listdir(image_path):
-    downscale_image(os.path.join(image_path,image))
+    try:
+        downscale_image(os.path.join(image_path,image))
+    except UnidentfiedImageError:
+        print("File with name '" + os.path.basename(im) + "' cant be downscaled because its not an image")
