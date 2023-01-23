@@ -9,8 +9,9 @@ json_path = r"C:\Users\rexvizsla\Desktop\AI\HRAI\possible_dataset\rated"
 
 def on_submit():
     global rating
-    rating = float(rating_entry.get())
-    assert 0 <= rating <= 1, "Invalid input, please enter a number between 0 and 1"
+    rating = int(rating_entry.get())
+    assert 0 <= rating <= 100, "Invalid input, please enter a number between 0 and 100"
+    rating = float(rating*0.01)
     save_rating()
     move_rated_image()
     show_next_image()
